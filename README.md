@@ -1,66 +1,35 @@
-# DREPNet
-Enhancing Small Lesion Detection in Medical Images via Dynamic Reparameterization and Edge-Polar Co-Awareness
+# Enhancing Small Lesion Detection in Medical Images via Dynamic Reparameterization and Edge-Polar Co-Awareness
 
-**[Under Review at *The Visual Computer*]**
+**[Manuscript Submitted to *The Visual Computer*]**
 
-![Python 3.8+](https://img.shields.io/badge/Python-3.8+-blue.svg)
-![PyTorch 1.10+](https://img.shields.io/badge/PyTorch-1.10+-ee4c2c.svg)
+This repository contains the official implementation of the core architectural components for our paper, "Enhancing Small Lesion Detection in Medical Images via Dynamic Reparameterization and Edge-Polar Co-Awareness". The proposed model is named **DREPNet**.
 
-This repository contains the official implementation of our proposed modules and model configurations for the paper "Enhancing Small Lesion Detection in Medical Images via Dynamic Reparameterization and Edge-Polar Co-Awareness".
-
-**Note:** This is a partial release containing the core architectural components and model configuration files to ensure the reproducibility of our key designs. The full project code, including training and evaluation scripts, will be made publicly available upon the acceptance of the manuscript.
+**Note on Code Availability:** This is a partial release intended to ensure the transparency and reproducibility of our key architectural designs. The full project, including scripts for training, inference, and visualization, along with dependency files, will be made publicly available shortly after the manuscript's acceptance.
 
 ## Overview
 
-DREPNet is a novel lightweight framework specifically engineered for the challenging task of small lesion detection in high-resolution medical images. It addresses critical issues such as low contrast, ambiguous boundaries, and information loss in conventional models by integrating a series of synergistic architectural innovations:
+This work introduces **DREPNet**, a novel lightweight framework specifically engineered for the challenging task of small lesion detection in high-resolution medical images. To address critical issues such as low contrast, ambiguous boundaries, and information loss in conventional models, DREPNet integrates a series of synergistic architectural innovations. These include a high-fidelity reparameterized feature pyramid for lossless feature scaling, a specialized multi-scale mechanism for edge enhancement, and a polarity-aware attention module for improved feature discriminability. Our goal is to provide an efficient, reliable, and practical solution for computer-aided early diagnosis.
 
--   **Reparameterized Dynamic Spatial Feature Pyramid Network (RepDSFPN)**
--   **Edge-guided Multi-scale Feature Enhancement (EMFE)**
--   **Polarity-gated Attention (PGA)**
+## Current Release
 
-For a detailed explanation of the methodology, please refer to our manuscript.
-
-## Core Modules and Configuration
-
-This initial release includes the following key components to facilitate understanding and verification of our architecture:
+This repository currently contains the core components of the DREPNet architecture:
 
 1.  **Module Implementations (`/modules`)**:
-    -   `repdsfpn_components.py`: Contains the implementation of core building blocks for RepDSFPN, such as `DySample` and `SPD-Conv`.
-    -   `emfe.py`: The implementation of our Edge-guided Multi-scale Feature Enhancement (EMFE) module.
-    -   `pga.py`: The implementation of our Polarity-gated Attention (PGA) mechanism.
+    -   This directory contains the PyTorch implementation of the core modules for the DREPNet model.
 
 2.  **Model Configuration (`/configs`)**:
-    -   `drepnet.yaml`: The YAML configuration file that defines the full DREPNet architecture, including the backbone and head structures. This file details how our proposed modules are integrated.
+    -   The `DREPNet.yaml` file, which defines the complete model architecture and demonstrates how the modules are integrated.
 
-## Future Release
+## Datasets
 
-Upon acceptance of our paper, this repository will be updated to include:
--   [ ] Complete training and validation scripts (`train.py`, `val.py`).
--   [ ] Scripts for data preprocessing.
--   [ ] Pre-trained model weights for both VinDR-CXR and Br35H datasets.
--   [ ] Detailed instructions for reproducing the results reported in our paper.
+Our model's performance was rigorously evaluated on two challenging, publicly available medical imaging datasets. We encourage users to access these datasets via their official sources to ensure compliance with their respective licensing and usage policies.
 
-## Citation
+-   **VinDR-CXR** ([Official Website](https://vindr.ai/datasets))
 
-If you find our work or the provided modules useful in your research, we kindly ask you to cite our paper. The BibTeX entry will be provided upon publication.
+    The VinDR-CXR dataset is a large-scale collection of 18,000 chest X-ray images, annotated by experienced radiologists for 14 common thoracic diseases. In our study, we utilized the 15,000 images with public annotations. This dataset is particularly challenging due to the high prevalence of small and low-contrast lesions.
 
-```bibtex
-@article{YourLastName2025DREPNet,
-  title={DREPNet: A Dynamic Reparameterized Edge-polar Co-aware Network for Small Lesion Detection},
-  author={Li, Haoxuan and Li, Yang},
-  journal={The Visual Computer},
-  year={2025},
-  % Details like volume, pages, publisher will be added upon acceptance.
-}
-```
+-   **Br35H** ([Official Website](https://ieee-dataport.org/documents/br35h-brain-tumor-detection-2020-0))
 
-## Dataset Information
+    The Br35H dataset contains 801 brain MRI images labeled for tumor detection. For our experiments, we followed a standard split of 500 images for training, 201 for validation, and 100 for testing. This dataset serves as a benchmark for evaluating the model's generalization ability on a different imaging modality and anatomical region.
 
-This work was evaluated on two public datasets. To ensure originality and proper licensing, please apply for access through their official websites.
-
--   **VinDR-CXR**: [Official Website Link](https://vindr.ai/datasets/cxr)
--   **Br35H**: [Kaggle Dataset Link](https://www.kaggle.com/datasets/ahmedhamada0/brain-tumor-mri-dataset)
-
-When using these datasets, please cite their original papers accordingly.
-
----
+Please ensure to cite the original papers of these datasets if you use them in your research.

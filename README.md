@@ -5,9 +5,8 @@ Enhancing Small Lesion Detection in Medical Images via Dynamic Reparameterizatio
 
 ![Python 3.8+](https://img.shields.io/badge/Python-3.8+-blue.svg)
 ![PyTorch 1.10+](https://img.shields.io/badge/PyTorch-1.10+-ee4c2c.svg)
-[![Paper](https://img.shields.io/badge/Paper-PDF-red)](https://link_to_your_arxiv_preprint) <!-- Optional: Add link to your arXiv preprint when available -->
 
-This repository contains the official implementation of our proposed modules and model configurations for the paper "DREPNet: A Dynamic Reparameterized Edge-polar Co-aware Network for Small Lesion Detection".
+This repository contains the official implementation of our proposed modules and model configurations for the paper "Enhancing Small Lesion Detection in Medical Images via Dynamic Reparameterization and Edge-Polar Co-Awareness".
 
 **Note:** This is a partial release containing the core architectural components and model configuration files to ensure the reproducibility of our key designs. The full project code, including training and evaluation scripts, will be made publicly available upon the acceptance of the manuscript.
 

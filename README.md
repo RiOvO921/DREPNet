@@ -17,7 +17,7 @@ This repository currently contains the core components of the DREPNet architectu
 1.  **Module Implementations (`/modules`)**:
     -   This directory contains the PyTorch implementation of the core modules for the DREPNet model.
 
-2.  **Model Configuration (`/configs`)**:
+2.  **Model Configuration (`/config`)**:
     -   The `DREPNet.yaml` file, which defines the complete model architecture and demonstrates how the modules are integrated.
 
 ## Datasets

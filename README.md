@@ -1,2 +1,2 @@
 # DREPNet
-A Dynamic Reparameterized Edge-polar Co-aware Network for Small Lesion Detection
+Enhancing Small Lesion Detection in Medical Images via Dynamic Reparameterization and Edge-Polar Co-Awareness
